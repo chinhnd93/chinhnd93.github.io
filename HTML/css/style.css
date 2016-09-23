@@ -1,0 +1,54 @@
+* {
+	box-sizing: border-box;
+}
+.wrap {
+	max-width: 1000px;
+	margin: auto;
+}
+#banner img {
+	width: 100%;
+}
+.content img {
+	width: 33%;
+	height: 220px;
+}
+.content1 {
+	float: left;
+	margin: auto;
+}
+.content2 {
+	float: left;
+	margin: auto;
+}
+.content3 {
+	float: left;
+	margin: auto;
+}
+.content4 {
+	float: left;
+	margin: auto;
+}
+.content img:hover {
+	border-radius: 30%;
+}
+#menu {
+	margin: 20px;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+}
+#menu a:link {
+	text-decoration: none;
+	color: blue;
+}
+#menu a:visited {
+
+	color: black;
+}
+#menu a:hover {
+
+	color: green;
+}
+#menu a:active {
+	color: red;
+}
