@@ -32,10 +32,11 @@
 	border-radius: 30%;
 }
 #menu {
-	margin: 20px;
+	margin: 70px;
 	text-align: center;
 	font-size: 30px;
 	font-weight: bold;
+	position: relative;
 }
 #menu a:link {
 	text-decoration: none;
@@ -51,4 +52,21 @@
 }
 #menu a:active {
 	color: red;
+}
+#menu a.ava img {
+		height: 200px;
+		width: 200px;
+		border-radius: 50%;
+		position: absolute;
+    top: -150px;
+    left: -50px;
+}
+#chat {
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+}
+#chat img {
+	width: 50px;
+	height: 50px;
 }
