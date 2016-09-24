@@ -51,6 +51,9 @@
 .content img:hover {
 	border-radius: 30%;
 }
+.fix {
+	overflow: hidden;
+}
 #menu {
 	margin: 70px;
 	text-align: center;
@@ -89,4 +92,42 @@
 #btt img {
 	width: 50px;
 	height: 50px;
+}
+@keyframes title {
+	0% {background-color: white; color: red;}
+	25% {background-color: black; color: white;}
+	50% {background-color: green; color: yellow;}
+	75% {background-color: blue; color: white;}
+	100% {background-color: yellow; color: blue;}
+}
+
+@keyframes author {
+	30% {padding-right: 0px;}
+	75% {padding-right: 650px;}
+}
+
+@keyframes lost {
+	30% {opacity: 1;}
+	50% {opacity: 0.5;}
+	75% {opacity: 0;}
+	100% {opacity: 0;}
+}
+h1 {
+	text-transform: uppercase;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	text-align: center;
+	font-size: 40px;
+	padding: 30px;
+	animation: title 10s ease infinite;
+}
+
+.h3 h3 {
+	text-transform: uppercase;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	text-align: right;
+	color: red;
+	animation: author 5s ease infinite, lost 5s ease infinite;
+	opacity: 1;
 }
