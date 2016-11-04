@@ -1,0 +1,103 @@
+*{
+	box-sizing: border-box;
+}
+.col-md-4{
+	padding: 20px;
+}
+.btn{
+	margin: 10px 2px;
+	width: 50px;
+}
+.zero{
+	width: 104px;
+}
+table{
+	border: 1px solid #ddd;
+	margin: auto;
+}
+.change{
+	width: 265px;
+}
+/*Xong css bài máy tính (jQuery.html)*/
+
+.container{
+	padding-top: 20px;
+	position: relative;
+}
+#btn{
+	display: block;
+  margin: auto;
+}
+
+
+@media all and (min-width: 320px) and (max-width: 768px){
+	.container{
+		padding-top: 20px;
+		position: relative;
+	}
+	.front1{
+		position: inherit;
+		margin-bottom: 40px;
+	}
+	.behind1{
+		position: inherit;
+		margin-bottom: 132.297px;
+	}
+
+	.front2{
+		position: inherit;
+		margin-bottom: 100px;
+	}
+	.behind2{
+		position: inherit;
+		margin-bottom: 192.297px;
+	}
+
+	.front3{
+		position: inherit;
+		margin-bottom: 160px;
+	}
+	.behind3{
+		position: inherit;
+		margin-bottom: 253.297px;
+	}
+}
+
+
+
+.front1{
+	position: inherit;
+	bottom: -30px;
+}
+.behind1{
+	position: inherit;
+	bottom: 139.297px;
+}
+
+.front2{
+	position: inherit;
+	bottom: 120px;
+}
+.behind2{
+	position: inherit;
+	bottom: 289.297px;
+}
+
+.front3{
+	position: inherit;
+	bottom: 270px;
+}
+.behind3{
+	position: inherit;
+	bottom: 439.297px;
+}
+
+
+.front{
+	transform: rotateY(180deg);
+	transition: transform 0.3s;
+}
+.behind{
+	transition: transform 0.3s;
+	backface-visibility: hidden;
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Try jQuery</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/jquery.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				
+			</div>
+			<div class="col-md-4">
+				<table>
+					<tr>
+						<td colspan="5">
+							<input type="text" id="ip" class="form-control"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<button type="button" class="btn" id="binhphuong">x<sup>2</sup></button>
+						</td>
+						<td>
+							<button type="button" class="btn" id="giaithua">!</button>
+						</td>
+						<td>
+							<button type="button" class="btn" id="canbachai">&#8730;</button>
+						</td>
+						<td>
+							<button type="button" class="btn" onclick="ip.value=ip.value.slice(0,ip.value.length-1)">DEL</button>
+						</td>
+						<td>
+							<button type="button" class="btn" onclick="ip.value=''">AC</button>
+						</td>
+					</tr>
+					
+
+					<tr>
+						<td>
+							<button type="button" class="btn" value="7" onclick="ip.value+=this.value">7</button>
+						</td>
+						<td>
+							<button type="button" class="btn" value="8" onclick="ip.value+=this.value">8</button>
+						</td>
+						<td>
+							<button type="button" class="btn" value="9" onclick="ip.value+=this.value">9</button>
+						</td>
+						<td>
+							<button type="button" class="btn" value="(" onclick="ip.value+=this.value">(</button>
+						</td>
+						<td>
+							<button type="button" class="btn" value=")" onclick="ip.value+=this.value">)</button>
+						</td>
+					</tr>
+
+
+					<tr>
+						<td>
+							<button type="button" class="btn" value="4" onclick="ip.value+=this.value">4</button>
+						</td>
+						<td>
+							<button type="button" class="btn" value="5" onclick="ip.value+=this.value">5</button>
+						</td>
+						<td>
+							<button type="button" class="btn" value="6" onclick="ip.value+=this.value">6</button>
+						</td>
+						<td>
+							<button type="button" class="btn" value="*" onclick="ip.value+=this.value">*</button>
+						</td>
+						<td>
+							<button type="button" class="btn" value="/" onclick="ip.value+=this.value">/</button>
+						</td>
+					</tr>
+
+
+					<tr>
+						<td>
+							<button type="button" class="btn" value="1" onclick="ip.value+=this.value">1</button>
+						</td>
+						<td>
+							<button type="button" class="btn" value="2" onclick="ip.value+=this.value">2</button>
+						</td>
+						<td>
+							<button type="button" class="btn" value="3" onclick="ip.value+=this.value">3</button>
+						</td>
+						<td>
+							<button type="button" class="btn" value="+" onclick="ip.value+=this.value">+</button>
+						</td>
+						<td>
+							<button type="button" class="btn" value="-" onclick="ip.value+=this.value">-</button>
+						</td>
+					</tr>
+
+
+					<tr>
+						<td colspan="2">
+							<button type="button" class="btn zero" value="0" onclick="ip.value+=this.value">0</button>
+						</td>
+						<td>
+							<button type="button" class="btn" value="%" onclick="ip.value+=this.value">%</button>
+						</td>
+						<td>
+							<button type="button" class="btn" value="." onclick="ip.value+=this.value">.</button>
+						</td>
+						<td>
+							<button type="button" class="btn" value="=" id="kq">=</button>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="5">
+							<button type="button" class="btn change" id="theme">Change theme</button>
+						</td>
+					</tr>
+
+
+				</table>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script>
+		var x=$('#ip');
+		var y=$('#kq');
+		$('#canbachai').on('click', function(){
+			x.val(Math.sqrt(x.val()));
+		});
+		$('#giaithua').on('click', function(){
+			var k=1;
+			for(var i=1; i<=x.val();i++)
+				k*=i;
+			x.val(k);
+		});
+		$('#binhphuong').on('click', function(){
+			x.val(x.val()*x.val());
+		});
+			y.on('click', function(){
+				x.val(eval(x.val()));
+			});
+		$('#theme').on('click', function(){
+			if(!$('.btn').hasClass('btn-primary')){
+				$('.btn').removeClass('btn-success');
+				$('.btn').addClass('btn-primary');
+			}
+			else{
+				$('.btn').removeClass('btn-primary');
+				$('.btn').addClass('btn-success');
+			}
+		});
+	</script>
+</body>
+</html>
