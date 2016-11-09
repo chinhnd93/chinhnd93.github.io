@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" style="text/css" href="css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" style="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-offset-4 col-md-4">
+				<form action="success.html" id="form-register">
+					<h1 id="h1">Đăng kí tài khoản</h1>
+					<div class="form-group">
+						<b>Họ tên:</b> <span id="ht" class="error"></span>
+						<input type="text" name="hoten" class="form-control" placeholder="Họ tên ....." id="hoten">
+					</div>
+					<div class="form-group">
+						<b>Ngày sinh:</b>
+						<input type="text" name="ngaysinh" class="form-control" placeholder="Ngày sinh ....." id="ngaysinh">
+					</div>
+					<div class="form-group">
+						<b>Địa chỉ:</b>
+						<input type="text" name="diachi" class="form-control" placeholder="Địa chỉ ....." id="diachi">
+					</div>
+					<div class="form-group">
+						<b>Điện thoại:</b>
+						<input type="text" name="dienthoai" class="form-control" placeholder="Điện thoại ....." id="dienthoai">
+					</div>
+					<div class="form-group">
+						<b>Facebook:</b>
+						<input type="text" name="facebook" class="form-control" placeholder="Facebook ....." id="facebook">
+					</div>
+					<div class="form-group">
+						<b>Email:</b> <span id="em" class="error"></span>
+						<input type="email" name="email" value="" placeholder="Email ....." class="form-control" id="email">
+					</div>
+					<div class="form-group">
+						<b>Password:</b> <span id="pw" class="error"></span>
+						<input type="password" name="password" value="" placeholder="Password ....." class="form-control" id="password">
+					</div>
+					<div class="form-group">
+						<input type="radio" name="gioitinh" id="male" value="Namm"> <label for="male">Nam</label>   
+						<input type="radio" name="gioitinh" id="female" value="Nữữ"> <label for="female">Nữ</label>
+					</div>
+					<input type="submit" value="Submit" class="btn btn-primary" style="display: block; margin: auto" id="submit">
+				</form>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script>
+		var quocky=true;
+		$('#form-register').on('submit',function(){
+			if($('#hoten').val().trim()==""){
+				$('#ht').text("Không được để trống");
+				quocky=false;
+			} else{
+				$('#ht').text("");
+				quocky=true;
+			}
+			if($('#email').val().trim()==""){
+				$('#em').text("Không được để trống");
+				quocky=false;
+			} else{
+				$('#em').text("");
+				quocky=true;
+			}
+			if($('#password').val().trim()==""){
+				$('#pw').text("Không được để trống");
+				quocky=false;
+			} else{
+				$('#pw').text("");
+				quocky=true;
+			}
+			return quocky;
+		});
+	</script>
+</body>
+</html>

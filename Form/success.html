@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Success</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" style="text/css" href="css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" style="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-offset-4 col-md-4">
+				<h1>Đăng kí thành công</h1>
+				<h2>Thông tin tài khoản</h2>
+				<p>Họ tên: <span id="ht"></span></p>
+				<p>Ngày sinh: <span id="ns"></span></p>
+				<p>Địa chỉ: <span id="dc"></span></p>
+				<p>Điện thoại: <span id="dt"></span></p>
+				<p>Facebook: <span id="fb"></span></p>
+				<p>Email: <span id="em"></span></p>
+				<p>Password: <span id="pw"></span></p>
+				<p>Giới tính: <span id="gt"></span></p>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script>
+		var t = window.location.search;
+		var str = decodeURIComponent(t);
+
+		var s_ht = str.indexOf('hoten');
+		var e_ht = str.indexOf('&');
+		var ho_ten = str.slice(s_ht+6,e_ht);
+
+		var s_ns = str.indexOf('ngaysinh');
+		var e_ns = str.indexOf('&',e_ht+1);
+		var ngay_sinh = str.slice(s_ns+9,e_ns);
+
+		var s_dc = str.indexOf('diachi');
+		var e_dc = str.indexOf('&',e_ns+1);
+		var dia_chi = str.slice(s_dc+7,e_dc);
+
+		var s_dt = str.indexOf('dienthoai');
+		var e_dt = str.indexOf('&',e_dc+1);
+		var dien_thoai = str.slice(s_dt+10,e_dt);
+
+		var s_fb = str.indexOf('facebook');
+		var e_fb = str.indexOf('&',e_dt+1);
+		var face_book = str.slice(s_fb+9,e_fb);
+
+		var s_em = str.indexOf('email');
+		var e_em = str.indexOf('&',e_fb+1);
+		var email_ = str.slice(s_em+6,e_em);
+
+		var s_pw = str.indexOf('password');
+		var e_pw = str.indexOf('&',e_em+1);
+		var pass_word = str.slice(s_pw+9,e_pw);
+		
+		var s_gt = str.indexOf('gioitinh');
+		var e_gt = str.indexOf('&',e_pw+1);
+		var gioi_tinh = str.slice(s_gt+9,e_gt);
+
+	function space(stri){
+			var new1=stri.split("+");
+			var new2=new1.join(" ");
+			return new2;
+	}
+	ho_ten=space(ho_ten);
+	ngay_sinh=space(ngay_sinh);
+	gioi_tinh=space(gioi_tinh);
+	dia_chi=space(dia_chi);
+	dien_thoai=space(dien_thoai);
+	face_book=space(face_book);
+	email_=space(email_);
+	pass_word=space(pass_word);
+	$('#ht').text(ho_ten);
+	$('#ns').text(ngay_sinh);
+	$('#gt').text(gioi_tinh);
+	$('#dc').text(dia_chi);
+	$('#dt').text(dien_thoai);
+	$('#fb').text(face_book);
+	$('#em').text(email_);
+	$('#pw').text(pass_word);
+	</script>
+</body>
+</html>
