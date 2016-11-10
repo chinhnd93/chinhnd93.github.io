@@ -12,9 +12,20 @@ var app={
 		}
 	},
 	addJobToList: function(type, jobName){
-		var item='<div href="#!" class="collection-item">'+jobName+'<i class="material-icons right">delete</i></div>';
+		var item='<div href="#!" class="collection-item">'+jobName+'<i class="material-icons right" onclick="app.deleteJobToList(this)">delete</i></div>';
 		$('#'+type).append(item);
-	}
+	},
+	deleteJobToList: function(span){
+			console.log("abc");
+			$('.modal').css('display','block');
+			$('#btn-delete').on('click',function(){				
+				$('.modal').css('display','none');
+				$(span).parent().remove();
+			});
+			$('#btn-flat').on('click',function(){				
+				$('.modal').css('display','none');
+			});
+		}
 };
 
 

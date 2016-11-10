@@ -16,3 +16,10 @@
 .collection div.collection-item:hover .material-icons{
 	color: #000;
 }
+.modal-content{
+	height: 50px;
+}
+.modal .modal-footer .btn{
+    float: right;
+    margin: 6px 10px;
+}
