@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kanban</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<nav>
+    			<div class="nav-wrapper">
+			      <div href="#" class="brand-logo center">KANBAN</div>
+	    		</div>
+  			</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="card">
+					
+					
+					
+					<div class="collection sorted-list" id="todo">
+						<h5 style="margin: 0; padding: 15px; background-color: #E91E63; color: #fff">TODO (4)</h5>
+		        <div href="#!" class="collection-item">Alvin<i class="material-icons right">delete</i></div>
+		        <div href="#!" class="collection-item">Alvin<i class="material-icons right">delete</i></div>
+		        <div href="#!" class="collection-item">Alvin<i class="material-icons right">delete</i></div>
+		        <div href="#!" class="collection-item">Alvin<i class="material-icons right">delete</i></div>
+		        <div href="#!" class="collection-item">Alvin<i class="material-icons right">delete</i></div>
+      		</div>
+					<div class="collection sorted-list" id="todo">
+      			<input id="new_job_todo" type="text" name="themmoi1" placeholder="New job" style="margin-left: 20px; width: 85%;" onkeydown="app.newJob(event, 'todo', this)">
+      		</div>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+				<div class="card">
+					
+					<div class="collection sorted-list" id="doing"> 
+						<h5 style="margin: 0; padding: 15px; background-color: #FF9800; color: #fff">DOING (1)</h5>
+		        <div href="#!" class="collection-item">Alvin<i class="material-icons right">delete</i></div>
+      		</div>
+      		<div class="collection sorted-list" id="doing"> 
+						<input id="new_job_doing" type="text" name="themmoi2" placeholder="New job" style="margin-left: 20px; width: 85%;" onkeydown="app.newJob(event, 'doing', this)">
+      		</div>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+				<div class="card">
+					
+					<div class="collection sorted-list" id="done">
+						<h5 style="margin: 0; padding: 15px; background-color: #43A047; color: #fff">DONE (2)</h5>
+		        <div href="#!" class="collection-item">Alvin<i class="material-icons right">delete</i></div>
+		        <div href="#!" class="collection-item">Alvin<i class="material-icons right">delete</i></div>
+		        <div href="#!" class="collection-item">Alvin<i class="material-icons right">delete</i></div>
+      		</div>
+      		<div class="collection sorted-list" id="done">
+						<input id="new_job_done" type="text" name="themmoi3" placeholder="New job" style="margin-left: 20px; width: 85%;" onkeydown="app.newJob(event, 'done', this)">
+      		</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+*{
+	box-sizing: border-box;
+}
+.ui-state-highlight{
+	display: block;
+	background-color: #dadada;
+	height: 43px;
+}
+.collection div.collection-item{
+	color: #5D4037;
+	font-weight: 700;
+}
+.collection div.collection-item .material-icons{
+	color: #fff;
+}
+.collection div.collection-item:hover .material-icons{
+	color: #000;
+}
