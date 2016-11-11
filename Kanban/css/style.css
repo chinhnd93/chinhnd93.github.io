@@ -23,3 +23,6 @@
     float: right;
     margin: 6px 10px;
 }
+.collection div.collection-item:hover{
+	cursor: pointer;
+}
