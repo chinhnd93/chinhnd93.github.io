@@ -31,10 +31,11 @@ var app={
 				//Update DOM
 				if(!list[type]) list[type]=[];
 				list[type].push(jobName);
-				DB.setData(list);
+				
 				this.addJobToList(type, jobName);
 				//Reset input
 				$(input).val('');
+				DB.setData(list);
 			}
 		}
 	},
@@ -43,13 +44,19 @@ var app={
 		$('#'+type).append(item);
 	},
 	deleteJobToList: function(span){
+			var columType=$(span).parent().parent().attr('id');
+			var itemPosition=$("#"+columType+" .material-icons").index(span);
+			$('#btn-delete').off('click');
 			$('.modal').css('display','block');
-			$('#btn-delete').on('click',function(){				
+			$('#btn-delete').on('click',function(){			
 				$('.modal').css('display','none');
+				list[columType].splice(itemPosition,1);
+				DB.setData(list);
 				$(span).parent().remove();
 			});
 			$('#btn-flat').on('click',function(){				
 				$('.modal').css('display','none');
+				$('#btn-delete').off('click');
 			});
 		}
 };
