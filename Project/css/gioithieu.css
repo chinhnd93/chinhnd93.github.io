@@ -1,0 +1,22 @@
+*{
+	box-sizing: border-box;
+}
+.btn{
+	display: block;
+	margin: 20px;
+}
+.col-md-6{
+	padding: 20px;
+}
+.row{
+	margin: 20px 0;
+}
+.glyphicon{
+	padding-top: 10px;
+}
+.icondb {
+	color: #000;
+}
+#icondb {
+	padding-top: 40px;
+}

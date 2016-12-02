@@ -1,0 +1,47 @@
+#banner {
+	width: 100%;
+	position: relative;
+}
+}
+.paragraph {
+	text-align: center;
+}
+
+#avata {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    border-radius: 50%;
+    
+}
+
+@media(max-width: 420px){
+	#banner {
+		padding-top: 30px;
+		}
+	#avata{
+		
+    position: absolute;
+    
+    left: 30px;
+    border-radius: 50%;
+    width: 60px;
+    bottom: 5px;
+	}
+	.container{
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+	.col-xs-12{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.navbar-nav {
+    
+    padding-left: 10px;
+	}
+	}
+
+
+
+

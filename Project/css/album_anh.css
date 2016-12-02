@@ -1,0 +1,101 @@
+.slideshow { 
+        position:relative; /*Make the slideshow container  position:relative and make the sub elements absolute to position the sub element absolute to the container*/
+        height:280px; /*The slide show height*/
+        overflow:hidden;
+    }
+    .slideshow div {
+        position:absolute; 
+        top:0px;;
+        left:0;
+        z-index:8;
+    }
+    
+    .slideshow div.active {
+        z-index:10;
+    }
+    .slideshow div.lastactive {
+        z-index:9;
+    }
+
+.slideshow1 { 
+        position:relative; /*Make the slideshow container  position:relative and make the sub elements absolute to position the sub element absolute to the container*/
+        height:280px; /*The slide show height*/
+        overflow:hidden;
+    }
+    .slideshow1 div {
+        position:absolute; 
+        top:0px;;
+        left:0;
+        z-index:8;
+    }
+    
+    .slideshow1 div.active {
+        z-index:10;
+    }
+    .slideshow1 div.lastactive {
+        z-index:9;
+    }
+
+
+.slideshow2 { 
+        position:relative; /*Make the slideshow container  position:relative and make the sub elements absolute to position the sub element absolute to the container*/
+        height:280px; /*The slide show height*/
+        overflow:hidden;
+    }
+    .slideshow2 div {
+        position:absolute; 
+        top:0px;;
+        left:0;
+        z-index:8;
+    }
+    
+    .slideshow2 div.active {
+        z-index:10;
+    }
+    .slideshow2 div.lastactive {
+        z-index:9;
+    }
+
+
+.slideshow3 { 
+        position:relative; /*Make the slideshow container  position:relative and make the sub elements absolute to position the sub element absolute to the container*/
+        height:280px; /*The slide show height*/
+        overflow:hidden;
+    }
+    .slideshow3 div {
+        position:absolute; 
+        top:0px;;
+        left:0;
+        z-index:8;
+    }
+    
+    .slideshow3 div.active {
+        z-index:10;
+    }
+    .slideshow3 div.lastactive {
+        z-index:9;
+    }
+
+.slideshow4 { 
+        position:relative; /*Make the slideshow container  position:relative and make the sub elements absolute to position the sub element absolute to the container*/
+        height:280px; /*The slide show height*/
+        overflow:hidden;
+    }
+    .slideshow4 div {
+        position:absolute; 
+        top:0px;;
+        left:0;
+        z-index:8;
+    }
+    
+    .slideshow4 div.active {
+        z-index:10;
+    }
+    .slideshow4 div.lastactive {
+        z-index:9;
+    }
+
+
+.img-responsive {
+    padding-top: 50px;
+}
