@@ -10,7 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="css/navfix.css">
 	<link rel="stylesheet" type="text/css" href="css/dongthoigian.css">
 </head>
-<body>
+<body ng-app="myApp" ng-controller="myCtrl">
    
     
     
@@ -25,7 +25,12 @@
 					     		<li class="hidden-xs"><a href="#"><img src="img/icon.png" height="25px" alt=""></a></li>
 					     	
 					     	
-					     		<li ><input type="text" class="form-control search pad" placeholder="Tìm Kiếm"></li>
+					     		<li>
+										<ul>
+					     				<input type="text" class="form-control search pad" placeholder="Tìm Kiếm" ng-model="ten">
+											<li ng-repeat="item in names|filter:ten">{{item}}</li>
+										</ul>
+					     		</li>
 					     	
 						      
 						    
@@ -179,5 +184,12 @@
 	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script>
+		var app=angular.module("myApp",[]);
+		app.controller("myCtrl",function($scope){
+			$scope.names=["Emil","Carol","Thomas","Edison","Clinton"];
+		});
+	</script>
 </body>
 </html>

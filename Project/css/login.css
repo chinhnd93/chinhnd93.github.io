@@ -1,6 +1,9 @@
 *{
 	box-sizing: border-box;
 }
+.carousel-inner>.item>img{
+	height: 364px;
+}
 @media (max-width: 768px){
 	.logo{
 		    width: 100%;
@@ -10,6 +13,9 @@
 	}
 	.col-md-offset-5{
 		padding-left: 20px;
+	}
+	.carousel-inner>.item>img{
+		height: 180px;
 	}
 }
 .logo{
